@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 :root {
   --bs-main: #5E3BEE;
   --bs-body: #1C1E53;
@@ -9,106 +8,132 @@
   --bs-font-sans-serif: roboto;
   --bs-font-family: var(--bs-font-sans-serif);
 }
-body{
-  margin:0;
-  padding:0;
+
+body {
+  margin: 0;
+  padding: 0;
 }
-h1,h2,h3, strong, p, span, .row{
+
+h1, h2, h3, strong, p, span, .row {
   padding: 0;
   margin: 0;
 }
-h1{
+
+h1 {
   font-size: 64px;
   font-weight: 700;
   line-height: 120%;
   letter-spacing: 0em;
   text-align: left;
 }
-h2{
+
+h2 {
   font-size: 48px;
   line-height: 120%;
 }
-h3{
+
+h3 {
   font-size: 24px;
   line-height: 140%;
   font-weight: 700;
 }
-li>a{
-  color:var(--bs-body);
+
+li > a {
+  color: var(--bs-body);
   font-weight: 400;
   font-size: 21.3333px;
   line-height: 150%;
 }
-a, button, p{
+
+a, button, p {
   font-size: 21.33px;
 }
-.bg-secondary{
+
+.bg-secondary {
   background-color: var(--bs-bg-shade) !important;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.btn-outline-primary{
+
+.btn-outline-primary {
   background-color: white;
   color: var(--bs-main);
-  border-color:var(--bs-main) ;
+  border-color: var(--bs-main);
   border-width: 2px;
 }
-.btn:hover{
+
+.btn:hover {
   color: white;
   background-color: var(--bs-main);
 }
-.btn-primary{
+
+.btn-primary {
   color: white;
   background-color: var(--bs-main);
 }
-.body_1{
+
+.body_1 {
   font-size: 18px;
   line-height: 27px;
 }
-.body_2{
+
+.body_2 {
   font-size: 16px;
   line-height: 24px;
 }
-.body_3{
+
+.body_3 {
   font-size: 14px;
   line-height: 21px;
 }
-.purple{
+
+.purple {
   color: var(--bs-dribble);
 }
-.text-black{
+
+.text-black {
   color: black;
 }
-.text-main-purple{
+
+.text-main-purple {
   color: var(--bs-main);
 }
-.h1-header{
+
+.h1-header {
   font-size: 70px;
   font-weight: 700;
   line-height: 89px;
   letter-spacing: 0em;
   text-align: left;
 }
-.container-fluid{
+
+.container-fluid {
   margin: 0;
   padding: 0;
 }
-.welcome-text{
+
+.welcome-text {
   font-weight: 600;
   font-size: 21.3333px;
 }
-.header-text{
+
+.header-text {
   font-weight: 400;
   font-size: 24px;
   line-height: 150%;
 }
-.experience-card{
+
+.experience-card {
   box-shadow: none;
 }
+
 .py-6 {
   padding-top: 8.3rem !important;
   padding-bottom: 8.3rem !important;
 }
+
 .px-6 {
   padding-left: 5rem !important;
   padding-right: 5rem !important;
 }
+
+/*# sourceMappingURL=custom.css.map */
