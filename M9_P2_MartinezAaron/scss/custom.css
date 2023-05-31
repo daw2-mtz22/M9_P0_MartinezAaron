@@ -7,6 +7,7 @@
   --bs-heading: #282938;
   --bs-font-sans-serif: roboto;
   --bs-font-family: var(--bs-font-sans-serif);
+  --bs-btn-pink: #E62872;
 }
 
 body {
@@ -73,6 +74,13 @@ a, button, p, strong {
 .btn-primary {
   color: white;
   background-color: var(--bs-main);
+  pointer-events: none;
+}
+
+.btn-pink {
+  color: white;
+  background-color: var(--bs-btn-pink);
+  pointer-events: none;
 }
 
 .body_1 {
@@ -136,6 +144,10 @@ a, button, p, strong {
 
 .about-section {
   padding: 8.3rem 5rem;
+}
+
+.portfolio-section {
+  padding: 4.5rem 5rem;
 }
 
 .py-6 {
