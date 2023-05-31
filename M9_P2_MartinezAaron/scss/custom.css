@@ -20,11 +20,15 @@ h1, h2, h3, strong, p, span, .row {
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 64px !important;
   font-weight: 700;
   line-height: 120%;
   letter-spacing: 0em;
   text-align: left;
+}
+
+h1 > strong {
+  font-size: inherit;
 }
 
 h2 {
@@ -45,7 +49,7 @@ li > a {
   line-height: 150%;
 }
 
-a, button, p {
+a, button, p, strong {
   font-size: 21.33px;
 }
 
@@ -122,8 +126,16 @@ a, button, p {
   line-height: 150%;
 }
 
+.expertise-section {
+  padding: 9.3rem 5rem;
+}
+
 .experience-card {
   box-shadow: none;
+}
+
+.about-section {
+  padding: 8.3rem 5rem;
 }
 
 .py-6 {
@@ -134,6 +146,11 @@ a, button, p {
 .px-6 {
   padding-left: 5rem !important;
   padding-right: 5rem !important;
+}
+
+.col-13 {
+  flex: 0 0 auto;
+  width: 45%;
 }
 
 /*# sourceMappingURL=custom.css.map */
