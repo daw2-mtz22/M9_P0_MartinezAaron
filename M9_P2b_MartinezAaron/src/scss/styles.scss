@@ -1,0 +1,24 @@
+@import "~bootstrap/scss/bootstrap";
+
+body{
+  background-color: black;
+  color: white;
+}
+.header-wrapper{
+  padding: 1.5rem;
+  border-bottom: 2px solid grey;
+}
+img{
+  color: white !important;
+}
+.btn{
+  padding: 0.75rem 0.5rem;
+}
+.white-border{
+  border: 1px solid white;
+}
+.grey-border{
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+
+}
