@@ -6,13 +6,15 @@
   <title>Bootstrap w/ Vite</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="scss/styles.scss">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container-fluid g-0">
     <header>
       <div class="container-fluid header-wrapper">
-        <div class="row justify-content-between align-content-center">
+        <div class="row justify-content-between align-items-center">
           <div class="col-auto">
             <h1>El juego del TETRIS</h1>
           </div>
@@ -24,41 +26,335 @@
       </div>
     </header>
     <main>
-      <div class="container-fluid g-0 justify-content-center p-4">
-        <div class="row">
-          <div class="col">
-            <div class="container-fluid g-0">
-              <div class="row white-border">
-                <div class="col">
-                  <div class="title">Guardado</div>
-                  <div class="piece">Imagen</div>
-                </div>
-              </div>
-              <div class="row white-border">
-                <div class="col">
-                  <div class="title">Tiempo</div>
-                  <div class="count">01:45</div>
-                </div>
-              </div>
-              <div class="row white-border">
-                <div class="col">
-                  <div class="container-fluid g-0">
-                    <div class="row">
-                      <div class="col">
-                        <div class="title">Nivel</div>
-                        <div class="level">1</div>
+      <div class="container-fluid g-0 p-4">
+        <div class="row justify-content-center">
+          <div class="col-xxl-8 col-md-12">
+            <div class="container-fluid">
+              <div class="row justify-content-between">
+                <div class="col-lg-2 col-md-12 order-lg-first order-last col-5">
+                  <div class="container-fluid g-0 text-center">
+                    <div class="row white-border gap-row">
+                      <div class="col items-wrapper">
+                        <div class="title">Guardado</div>
+                        <div class="output">Imagen</div>
                       </div>
                     </div>
-                    <div class="row grey-border">
-                      <div class="col">
-                        <div class="title">Puntuacion</div>
-                        <div class="score">120.000</div>
+                    <div class="row white-border gap-row">
+                      <div class="col items-wrapper">
+                        <div class="title">Tiempo</div>
+                        <div class="output">01:45</div>
                       </div>
                     </div>
-                    <div class="row">
+                    <div class="row white-border">
                       <div class="col">
-                        <div class="title">Lineas</div>
-                        <div class="lines">12</div>
+                        <div class="container-fluid g-0">
+                          <div class="row">
+                            <div class="col items-wrapper">
+                              <div class="title">Nivel</div>
+                              <div class="output">1</div>
+                            </div>
+                          </div>
+                          <div class="row grey-border">
+                            <div class="col items-wrapper">
+                              <div class="title ">Puntuacion</div>
+                              <div class="output">120.000</div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col items-wrapper">
+                              <div class="title">Lineas</div>
+                              <div class="output">12</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-7 g-0 pb-md-4 pb-0">
+                  <div class="container-fluid">
+                    <div class="row g-0 justify-content-around">
+                      <div class="col-8 game-container rounded-1 border-2 border p-1">
+                        <div class="container-fluid  ">
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-5">
+                  <div class="container-fluid g-0 text-center">
+                    <div class="row white-border gap-row">
+                      <div class="col">
+                        <div class="container-fluid g-0">
+                          <div class="row">
+                            <div class="col items-wrapper">
+                              <div class="title ">Siguiente</div>
+                              <div class="output">1</div>
+                            </div>
+                          </div>
+                          <div class="row grey-border">
+                            <div class="col items-wrapper">
+                              <div class="title">Puntuacion</div>
+                              <div class="output">120.000</div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col items-wrapper">
+                              <div class="title">Lineas</div>
+                              <div class="output">12</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row white-border ">
+                      <div class="col items-wrapper">
+                        <div class="row">
+                          <button class="btn btn-primary ">JUGAR</button>
+                        </div>
+                        <div class="row">
+                          <button class="btn btn-primary ">PAUSAR</button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -66,8 +362,6 @@
               </div>
             </div>
           </div>
-          <div class="col"></div>
-          <div class="col"></div>
         </div>
       </div>
     </main>
