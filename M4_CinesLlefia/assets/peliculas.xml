@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<peliculas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="peliculas.xsd">
+    <pelicula>
+        <titulo>Moneyball</titulo>
+        <imagenPortada>"./assets/moneyball-portada.jpg"</imagenPortada>
+        <imagenCentral>"./assets/moneyball_grande.jpg"</imagenCentral>
+        <duracion>133</duracion>
+        <pais>Estados Unidos</pais>
+        <generos>
+            <genero>Deporte</genero>
+            <genero>Basado en hechos reales</genero>
+        </generos>
+        <estreno>2012-02-03
+        </estreno>
+        <directores>
+            <director>Bennett Miller</director>
+        </directores>
+        <guionistas>
+            <guionista>Aaron Sorkin</guionista>
+            <guionista>Steven Zaillian</guionista>
+        </guionistas>
+        <productores>
+            <productor>Columbia Pictures</productor>
+            <productor>Michael De Luca</productor>
+            <productor>Scott Rudin Productions</productor>
+            <productor>Specialty Films</productor>
+        </productores>
+        <actores>
+            <actor>Brad Pitt</actor>
+            <actor>Jonahan Hill</actor>
+            <actor>Philip Seymour Hoffman</actor>
+            <actor>Robin Wright</actor>
+            <actor>Stephen Bishop</actor>
+            <actor>Chris Pratt</actor>
+        </actores>
+        <estrellas>4</estrellas>
+        <votos>37047</votos>
+        <sinopsis>
+            <parrafo>En 2001, Billy Beane (Brad Pitt), director general de los Atléticos de Oakland (béisbol), se hizo famoso al conseguir grandes éxitos por medio del método "Moneyball", programa que consiste en construir un equipo competitivo con menos recursos económicos que la mayoría de los equipos de las Grandes Ligas y empleando métodos estadísticos por ordenador para coordinar a los jugadores.</parrafo></sinopsis>
+    </pelicula>
+</peliculas>
