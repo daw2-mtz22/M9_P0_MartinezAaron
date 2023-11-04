@@ -69,7 +69,7 @@ main{
     color: #0076ec;
 }
 .fondo{
-    background-image: url("../assets/poster.jpg");
+    background-image: url("./assets/poster.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;

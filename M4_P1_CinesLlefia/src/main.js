@@ -1,4 +1,4 @@
-import DomParser from "./no";
+import {DOMParser} from "@xmldom/xmldom";
 
 
 const createFichaBody = (title, portadaPath, puntuacion) =>{
@@ -7,7 +7,7 @@ const createFichaBody = (title, portadaPath, puntuacion) =>{
             <div class="col-fichas">
                 <h3 class="ficha-title">${title}</h3>
                 <div class="ficha-img-wrapper">
-                    <img src="${portadaPath}" alt="${title}">
+                    <img src="./assets/${portadaPath}" alt="${title}">
                 </div>
                 <div>${createPuntuacionBody(puntuacion)}</div>
             </div>
@@ -19,7 +19,7 @@ const createPuntuacionBody = (puntuacion = 0) =>{
 }
 const writeFichas = fichas =>{
     if (typeof document !== 'undefined') {
-        let containerDiv = document.getElementsByClassName('fila col-fichas')
+        let containerDiv = document.getElementsByClassName('fila col-fichas')[0].innerHTML = fichas
         containerDiv.innerHTML = fichas
     }
 }
@@ -28,22 +28,19 @@ const createXmlRequest = filePath=> {
      fetch(filePath)
         .then(response => response.text())
         .then(data => {
-            const parser = new DomParser();
+            const parser = new DOMParser();
             const xmlDoc = parser.parseFromString(data,'text/xml');
-
             const elements = xmlDoc.getElementsByTagName('pelicula');
-            elements.forEach(element =>{
-
-                const title = element.getElementsByTagName('titulo')[0].textContent;
-                const imagePath = element.getElementsByTagName('imagenPortada')[0].textContent;
-                const rating = element.getElementsByTagName('estrellas')[0].textContent;
+            for(let i = 0;i<elements.length; i++){
+                const title = elements[i].getElementsByTagName('titulo')[0].textContent;
+                const imagePath = elements[i].getElementsByTagName('imagenPortada')[0].textContent;
+                const rating = elements[i].getElementsByTagName('estrellas')[0].textContent;
                 fichasHTML += createFichaBody(title, imagePath, rating)
-            })
+            }
             writeFichas(fichasHTML)
         })
         .catch(error => {
             console.error('Error loading the XML file', error);
         });
 }
-
-createXmlRequest('http://127.0.0.1:8080/assets/peliculas.xml')
+createXmlRequest('http://localhost:5173/assets/peliculas.xml')
