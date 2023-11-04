@@ -1,4 +1,5 @@
-import DomParser from "dom-parser";
+import DomParser from "./no";
+
 
 const createFichaBody = (title, portadaPath, puntuacion) =>{
     return `
@@ -16,26 +17,29 @@ const createFichaBody = (title, portadaPath, puntuacion) =>{
 const createPuntuacionBody = (puntuacion = 0) =>{
     return puntuacion
 }
+const writeFichas = fichas =>{
+    if (typeof document !== 'undefined') {
+        let containerDiv = document.getElementsByClassName('fila col-fichas')
+        containerDiv.innerHTML = fichas
+    }
+}
 const createXmlRequest = filePath=> {
-    const fichasHTML = []
+    let fichasHTML = '';
      fetch(filePath)
         .then(response => response.text())
         .then(data => {
-            // Parse the XML data
             const parser = new DomParser();
             const xmlDoc = parser.parseFromString(data,'text/xml');
 
-            // Now you can work with the xmlDoc object
-            // For example, you can access elements and their attributes
             const elements = xmlDoc.getElementsByTagName('pelicula');
             elements.forEach(element =>{
 
                 const title = element.getElementsByTagName('titulo')[0].textContent;
                 const imagePath = element.getElementsByTagName('imagenPortada')[0].textContent;
                 const rating = element.getElementsByTagName('estrellas')[0].textContent;
-                fichasHTML.push(createFichaBody(title, imagePath, rating))
-                const textContent = element.textContent;
+                fichasHTML += createFichaBody(title, imagePath, rating)
             })
+            writeFichas(fichasHTML)
         })
         .catch(error => {
             console.error('Error loading the XML file', error);
