@@ -2,6 +2,7 @@ import path from 'path' // Para gestionar directorios
 
 export default {
     // Definimos la carpeta donde buscar cuando se carga la aplicación (donde estará el main.js)
+    base:'./',
     root: path.resolve(__dirname, 'src'),
     resolve: {
         alias: {
