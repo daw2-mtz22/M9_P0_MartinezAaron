@@ -6,7 +6,7 @@ export default {
     root: path.resolve(__dirname, 'src'),
     resolve: {
         alias: {
-            '~xmldom': path.resolve(__dirname, '../node_modules/xmldom'),
+            '~xmldom': path.resolve(__dirname, 'node_modules/xmldom'),
         }
     },
     build: {

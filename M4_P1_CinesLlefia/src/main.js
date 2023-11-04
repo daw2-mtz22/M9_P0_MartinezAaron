@@ -1,4 +1,4 @@
-import {DOMParser} from "@xmldom/xmldom";
+import {DOMParser} from "/@xmldom/xmldom";
 
 
 const createFichaBody = (title, portadaPath, puntuacion) =>{
