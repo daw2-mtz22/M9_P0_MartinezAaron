@@ -1,4 +1,4 @@
-import {DOMParser} from "/@xmldom/xmldom";
+import {DOMParser} from "@xmldom/xmldom";
 
 
 const createFichaBody = (title, portadaPath, puntuacion) =>{
@@ -19,7 +19,7 @@ const createPuntuacionBody = (puntuacion = 0) =>{
 }
 const writeFichas = fichas =>{
     if (typeof document !== 'undefined') {
-        let containerDiv = document.getElementsByClassName('fila col-fichas')[0].innerHTML = fichas
+        let containerDiv = document.getElementsByClassName('fila col-fichas')[0]
         containerDiv.innerHTML = fichas
     }
 }
@@ -36,6 +36,7 @@ const createXmlRequest = filePath=> {
                 const imagePath = elements[i].getElementsByTagName('imagenPortada')[0].textContent;
                 const rating = elements[i].getElementsByTagName('estrellas')[0].textContent;
                 fichasHTML += createFichaBody(title, imagePath, rating)
+                console.log(i)
             }
             writeFichas(fichasHTML)
         })
