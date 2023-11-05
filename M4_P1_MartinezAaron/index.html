@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <title>CinesLlefia</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/01308345d5.js" crossorigin="anonymous"></script>
+
     </head>
     <body>
     <header>
@@ -78,7 +80,7 @@
         </main>
         <footer></footer>
     <script type="module">
-        const createFichaBody = (title, portadaPath, puntuacion) =>{
+        const createFichaBody = (title, portadaPath, rating) =>{
             return `
         <div class="ficha">
             <div class="col-fichas">
@@ -86,13 +88,21 @@
                 <div class="ficha-img-wrapper">
                     <img src="./assets/${portadaPath}" alt="${title}">
                 </div>
-                <div>${createPuntuacionBody(puntuacion)}</div>
+                <div class="ficha-rating-wrapper">${createRatingBody(rating)}</div>
             </div>
         </div>
     `;
         }
-        const createPuntuacionBody = (puntuacion = 0) =>{
-            return puntuacion
+        const createRatingBody = (rating = 0) =>{
+            let ratingBody = ''
+            for(let i = rating; i>=1; i--){
+                ratingBody += '<i className="fa-solid fa-star" style="color: #fff700;"></i>'
+                rating = i
+            }
+            if(rating>0){
+                ratingBody += '<i className="fa-solid fa-star-half" style="color: #fff700;"></i>'
+            }
+            return `<span class="estrellas">${ratingBody}</span>`
         }
         const writeFichas = fichas =>{
             if (typeof document !== 'undefined') {
