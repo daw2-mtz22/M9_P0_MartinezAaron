@@ -189,12 +189,13 @@ main{
     flex-direction: row;
     width: 100%;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     display: flex;
 }
 .estrellas img{
     width: 20px;
+    color: #fff10e;
 }
 .votos{
     font-size: 12px;
