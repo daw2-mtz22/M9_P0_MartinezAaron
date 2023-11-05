@@ -154,7 +154,7 @@ main{
 .ficha-img-wrapper img{
     width: 100%;
 }
-.ficha-rating-wrapper span{
+.ficha-rating-wrapper{
     width: 100%;
 }
 .main-content{
