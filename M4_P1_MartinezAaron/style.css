@@ -154,9 +154,7 @@ main{
 .ficha-img-wrapper img{
     width: 100%;
 }
-.ficha-rating-wrapper{
-    width: 100%;
-}
+
 .main-content{
     background-color: #f3f2f2;
 }
@@ -186,4 +184,20 @@ main{
     text-decoration: none;
     color: white;
     font-weight: bold;
+}
+.ficha-rating-wrapper{
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.estrellas img{
+    width: 20px;
+}
+.votos{
+    font-size: 12px;
+    font-weight: bold;
+    color: #0c0c0c;
 }
