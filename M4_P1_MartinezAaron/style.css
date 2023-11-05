@@ -154,6 +154,9 @@ main{
 .ficha-img-wrapper img{
     width: 100%;
 }
+.ficha-rating-wrapper span{
+    width: 100%;
+}
 .main-content{
     background-color: #f3f2f2;
 }
