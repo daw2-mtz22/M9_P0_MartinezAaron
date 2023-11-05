@@ -4,8 +4,6 @@
         <meta charset="UTF-8">
         <title>CinesLlefia</title>
         <link rel="stylesheet" href="style.css">
-        <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
-
     </head>
     <body>
     <header>
@@ -96,15 +94,12 @@
         const createRatingBody = (rating = 0) =>{
             let ratingBody = ''
             for(let i = rating; i>=1; i--){
-                ratingBody += '<i className="fa-solid fa-star" style="color: #fff700;"></i>'
+                ratingBody += '<img src="assets/star-solid.svg" alt="star">'
                 rating = i
-                console.log(rating)
             }
-            console.log(rating)
+            if(rating%1 !== 0){
 
-            if(rating>0){
-
-                ratingBody += '<i className="fa-solid fa-star-half" style="color: #fff700;"></i>'
+                ratingBody += '<img src="assets/star-half-solid.svg" alt="star-half">'
             }
             return `<span class="estrellas">${ratingBody}</span>`
         }
