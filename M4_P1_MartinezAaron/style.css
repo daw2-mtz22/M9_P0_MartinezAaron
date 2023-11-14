@@ -15,10 +15,17 @@ img{
 }
 a:visited {
     text-decoration: none;
+    color: inherit;
 }
 body {
     font-family: "Roboto", sans-serif;
     font-size: 20px;
+}
+li{
+    list-style: none;
+}
+main{
+    color: #0076ec;
 }
 .container_fluid{
     width: 100%;
@@ -62,12 +69,7 @@ body {
 .menu li a{
     text-decoration: none;
 }
-.menu li{
-    list-style: none;
-}
-main{
-    color: #0076ec;
-}
+
 .fondo{
     background-image: url("assets/poster.jpg");
     background-repeat: no-repeat;
@@ -201,4 +203,34 @@ main{
     font-size: 12px;
     font-weight: bold;
     color: #0c0c0c;
+}
+footer i{
+    font-size: 40px;
+    color: #0076ec;
+}
+.icons-rrss{
+    display: flex;
+    justify-content: center;
+    padding-top: 3%;
+}
+.icons{
+    flex-basis:35%;
+}
+.menu-footer{
+    padding-top: 3%;
+    align-items: start;
+    justify-content: center;
+    color: #0076ec;
+}
+.menu-footer-col{
+    flex-basis: 20%;
+    align-items: center;
+}
+.menu-footer-col  ul{
+    display: flex;
+    flex-direction: column;
+    color: #808080
+}
+.menu-footer-col  h3 {
+    padding-bottom: 4%;
 }
