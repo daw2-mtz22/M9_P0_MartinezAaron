@@ -172,7 +172,7 @@
                 <div>
                     <div class="flex film-body-images">
                         <img class="imagen-portada" src="./assets/${filmData.imagePortada}" alt="">
-                            <img class="imagen-poster" src="./assets/${filmData.imagePortada}" alt="">
+                            <img class="imagen-poster" src="./assets/${filmData.imagePoster}" alt="">
                     </div>
                     <div class="flex film-body-rating">
                         <div class="estrellas">
@@ -211,9 +211,12 @@
         }
         return `<span class="estrellas">${ratingBody}</span>`
     }
-    const writeOnHtmlByClass = (divClass, content) => {
+    const writeOnHtmlByClass = (divClass, content, addClass) => {
         if (typeof document !== 'undefined') {
             let containerDiv = document.getElementsByClassName(divClass)[0]
+            if(addClass){
+                containerDiv.classList.add(addClass)
+            }
             containerDiv.innerHTML = content
         }
     }
@@ -263,7 +266,7 @@
                     }
 
                 const filmHtml = createFilmBody(filmData)
-                writeOnHtmlByClass('container main-content', filmHtml)
+                writeOnHtmlByClass('container main-content', filmHtml,'film-content-wrapper')
                 //Añadir los eventos a los botones de atrás
                 addEventToFilmButtons(index , xmlLength-1)
             })

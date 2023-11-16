@@ -270,11 +270,11 @@ main.hidden{
     flex-basis: 40%;
 }
 .imagen-portada{
-    width: 250px;
+    width: 300px;
     height: 350px;
 }
 .imagen-poster{
-    width: 475px;
+    width: 600px;
     height: 350px;
 }
 .film-body-rating{
@@ -284,5 +284,7 @@ main.hidden{
 }
 .film-menu, .film-description, .film-footer{
     color: #0C0C0C;
-
+}
+.film-content-wrapper{
+    width: 1600px;
 }
