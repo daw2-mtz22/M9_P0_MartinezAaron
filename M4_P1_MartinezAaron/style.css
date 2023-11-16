@@ -128,7 +128,7 @@ main{
     color: inherit;
 }
 .main-margins{
-    padding: 225px 15px 0 15px;
+    padding: 225px 15px 10px 15px;
 }
 .ficha{
     flex-basis: 21%;
@@ -159,6 +159,8 @@ main{
 
 .main-content{
     background-color: #f3f2f2;
+    padding: 20px 10px;
+
 }
 .menu-main-wrapper{
     color: #0076ec;
@@ -233,4 +235,54 @@ footer i{
 }
 .menu-footer-col  h3 {
     padding-bottom: 4%;
+}
+main.hidden{
+    display: none;
+}
+.film-menu div:nth-child(2){
+    flex-basis: 60%;
+    text-align: center;
+    background-color: white;
+    color: darkorange;
+    padding: 5px 0;
+}
+.film-menu{
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.film-body{
+    justify-content: space-between;
+    gap: 1%;
+    padding-bottom: 10px;
+}
+.film-body>div, .film-footer{
+    background-color: white;
+    padding: 15px 10px;
+}
+.film-body-images{
+    justify-content: space-between;
+}
+.film-body div:first-child{
+    flex-basis: 60%;
+}
+.film-description{
+    flex-basis: 40%;
+}
+.imagen-portada{
+    width: 250px;
+    height: 350px;
+}
+.imagen-poster{
+    width: 475px;
+    height: 350px;
+}
+.film-body-rating{
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+.film-menu, .film-description, .film-footer{
+    color: #0C0C0C;
+
 }

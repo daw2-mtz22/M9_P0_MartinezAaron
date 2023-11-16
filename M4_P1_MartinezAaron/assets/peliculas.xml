@@ -2,7 +2,7 @@
 <peliculas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:noNamespaceSchemaLocation="peliculas.xsd">
     <pelicula>
-        <titulo>Moneyball</titulo>
+        <titulo>Moneyball 1</titulo>
         <imagenPortada>/moneyball-portada.jpg</imagenPortada>
         <imagenCentral>/moneyball_grande.jpg</imagenCentral>
         <duracion>133</duracion>
@@ -40,7 +40,7 @@
             <parrafo>En 2001, Billy Beane (Brad Pitt), director general de los Atléticos de Oakland (béisbol), se hizo famoso al conseguir grandes éxitos por medio del método "Moneyball", programa que consiste en construir un equipo competitivo con menos recursos económicos que la mayoría de los equipos de las Grandes Ligas y empleando métodos estadísticos por ordenador para coordinar a los jugadores.</parrafo></sinopsis>
     </pelicula>
     <pelicula>
-        <titulo>Moneyball</titulo>
+        <titulo>Moneyball 2</titulo>
         <imagenPortada>/moneyball-portada.jpg</imagenPortada>
         <imagenCentral>/moneyball_grande.jpg</imagenCentral>
         <duracion>133</duracion>
@@ -78,7 +78,7 @@
             <parrafo>En 2001, Billy Beane (Brad Pitt), director general de los Atléticos de Oakland (béisbol), se hizo famoso al conseguir grandes éxitos por medio del método "Moneyball", programa que consiste en construir un equipo competitivo con menos recursos económicos que la mayoría de los equipos de las Grandes Ligas y empleando métodos estadísticos por ordenador para coordinar a los jugadores.</parrafo></sinopsis>
     </pelicula>
     <pelicula>
-        <titulo>Moneyball</titulo>
+        <titulo>Moneyball 3</titulo>
         <imagenPortada>/moneyball-portada.jpg</imagenPortada>
         <imagenCentral>/moneyball_grande.jpg</imagenCentral>
         <duracion>133</duracion>
@@ -116,7 +116,7 @@
             <parrafo>En 2001, Billy Beane (Brad Pitt), director general de los Atléticos de Oakland (béisbol), se hizo famoso al conseguir grandes éxitos por medio del método "Moneyball", programa que consiste en construir un equipo competitivo con menos recursos económicos que la mayoría de los equipos de las Grandes Ligas y empleando métodos estadísticos por ordenador para coordinar a los jugadores.</parrafo></sinopsis>
     </pelicula>
     <pelicula>
-        <titulo>Moneyball</titulo>
+        <titulo>Moneyball 4</titulo>
         <imagenPortada>/moneyball-portada.jpg</imagenPortada>
         <imagenCentral>/moneyball_grande.jpg</imagenCentral>
         <duracion>133</duracion>

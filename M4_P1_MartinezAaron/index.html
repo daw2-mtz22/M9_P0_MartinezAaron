@@ -42,12 +42,12 @@
         </div>
     </div>
 </header>
-<main>
+<main >
     <div class="container_fluid fondo">
         <div class="main-margins">
             <div class="container_fluid">
                 <div class="container main-content">
-                    <div class="fila menu menu-main-wrapper">
+                    <div class="menu menu-main-wrapper">
                         <div class="container ">
                             <ul class="flex menu-content">
                                 <li><a href="">ESTRENOS</a></li>
@@ -63,14 +63,14 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="fila menu menu-end menu-main-wrapper ">
+                    <div class="menu menu-end menu-main-wrapper ">
                         <div class="container menu-end">
                             <span>Ordenar por</span>
                             <a href="#" class="button button-blue">TOP PELICULAS</a>
                             <a href="#" class="button button-white">A-Z</a>
                         </div>
                     </div>
-                    <div class="fila col-fichas"></div>
+                    <div class="col-fichas"></div>
                 </div>
             </div>
         </div>
@@ -138,6 +138,7 @@
     </div>
 </footer>
 <script type="module">
+    const xmlPath='https://daw2-mtz22.github.io/M4_P1_MartinezAaron/assets/peliculas.xml'
     const createFichaBody = (title, portadaPath, rating, votos) => {
         return `
         <div class="ficha">
@@ -154,6 +155,50 @@
         </div>
     `;
     }
+    const createFilmBody = filmData =>{
+        return`<div class="film-content">
+            <div class="flex film-menu">
+                <div class="film-menu-button">
+                    <a>ANTERIOR</a>
+                </div>
+                <div>
+                    <h3>${filmData.title}</h3>
+                </div>
+                <div class="film-menu-button">
+                    <a>SIGUIENTE</a>
+                </div>
+            </div>
+            <div class="flex film-body">
+                <div>
+                    <div class="flex film-body-images">
+                        <img class="imagen-portada" src="./assets/${filmData.imagePortada}" alt="">
+                            <img class="imagen-poster" src="./assets/${filmData.imagePortada}" alt="">
+                    </div>
+                    <div class="flex film-body-rating">
+                        <div class="estrellas">
+                            <img src="assets/star-solid.svg" alt="star">
+                                <img src="assets/star-solid.svg" alt="star">
+                                    <img src="assets/star-solid.svg" alt="star">
+                                        <img src="assets/star-solid.svg" alt="star">
+                                            <img src="assets/star-solid.svg" alt="star">
+                        </div>
+                        <div><a href="">RRSS</a></div>
+                    </div>
+                </div>
+                <div class="film-description">
+                    <p>Duracion: ${filmData.duration}</p>
+                    <p>Pais: ${filmData.country}</p>
+                    <p>Genero: ${filmData.category}</p>
+                    <p>Estreno: ${filmData.premiere}</p>
+                </div>
+            </div>
+            <div class="film-footer">
+                <div class="film-footer-text">
+                    <p>Sinopsis: ${filmData.sinopsis}</p>
+                </div>
+            </div>
+        </div>`
+    }
     const createRatingBody = (rating = 0) => {
         let ratingBody = ''
         for (let i = rating; i >= 1; i--) {
@@ -166,13 +211,67 @@
         }
         return `<span class="estrellas">${ratingBody}</span>`
     }
-    const writeFichas = fichas => {
+    const writeOnHtmlByClass = (divClass, content) => {
         if (typeof document !== 'undefined') {
-            let containerDiv = document.getElementsByClassName('fila col-fichas')[0]
-            containerDiv.innerHTML = fichas
+            let containerDiv = document.getElementsByClassName(divClass)[0]
+            containerDiv.innerHTML = content
         }
     }
-    const createXmlRequest = filePath => {
+    const addEventFichas = () =>{
+        if (typeof document !== 'undefined') {
+            let fichas = document.querySelectorAll('.ficha')
+            fichas.forEach((ficha, index)=>{
+                ficha.addEventListener('click', () =>{
+                    filmXmlRequest(index)
+                })
+            })
+        }
+    }
+    const addEventToFilmButtons = (index, numOfFilms) =>{
+        if (typeof document !== 'undefined') {
+            let buttons = document.querySelectorAll('.film-menu-button')
+
+            buttons[0].addEventListener('click', () =>{
+                index-1 < 0 ? filmXmlRequest(numOfFilms) : filmXmlRequest(index-1)
+            })
+            buttons[1].addEventListener('click', () =>{
+                index+1>numOfFilms ? filmXmlRequest(0) : filmXmlRequest(index+1)
+            })
+        }
+    }
+    const filmXmlRequest = (index) =>{
+        console.log(index)
+        let filmData
+        fetch(xmlPath)
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(data, 'text/xml');
+                const filmXml = xmlDoc.getElementsByTagName('pelicula')[index];
+                const xmlLength = xmlDoc.getElementsByTagName('pelicula').length
+                    filmData = {
+                        title: filmXml.getElementsByTagName('titulo')[0].textContent,
+                        imagePortada:filmXml.getElementsByTagName('imagenPortada')[0].textContent,
+                        imagePoster:filmXml.getElementsByTagName('imagenCentral')[0].textContent,
+                        duration:filmXml.getElementsByTagName('duracion')[0].textContent,
+                        country:filmXml.getElementsByTagName('pais')[0].textContent,
+                        category:filmXml.getElementsByTagName('generos')[0].textContent,
+                        premiere:filmXml.getElementsByTagName('estreno')[0].textContent,
+                        sinopsis:filmXml.getElementsByTagName('sinopsis')[0].textContent,
+                        rating:filmXml.getElementsByTagName('estrellas')[0].textContent,
+                        votos: filmXml.getElementsByTagName('votos')[0].textContent
+                    }
+
+                const filmHtml = createFilmBody(filmData)
+                writeOnHtmlByClass('container main-content', filmHtml)
+                //Añadir los eventos a los botones de atrás
+                addEventToFilmButtons(index , xmlLength-1)
+            })
+            .catch(error => {
+                console.error('Error loading the XML file', error);
+            });
+    }
+    const fichasXmlRequest = filePath => {
         let fichasHTML = '';
         fetch(filePath)
             .then(response => response.text())
@@ -186,15 +285,16 @@
                     const rating = elements[i].getElementsByTagName('estrellas')[0].textContent;
                     const votos = elements[i].getElementsByTagName('votos')[0].textContent;
                     fichasHTML += createFichaBody(title, imagePath, rating, votos)
-                    console.log(i)
                 }
-                writeFichas(fichasHTML)
+                writeOnHtmlByClass('col-fichas',fichasHTML)
+                addEventFichas()
             })
             .catch(error => {
                 console.error('Error loading the XML file', error);
             });
     }
-    createXmlRequest('https://daw2-mtz22.github.io/M4_P1_MartinezAaron/assets/peliculas.xml')
+    fichasXmlRequest(xmlPath)
+
 </script>
 </body>
 </html>
